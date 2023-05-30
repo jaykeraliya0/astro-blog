@@ -1,0 +1,28 @@
+---
+const { title, image, alt, date, author, description, url } = Astro.props;
+const newDate: Date = new Date(date);
+---
+
+<a
+  href={url}
+  class="group relative h-96 w-full max-w-xs overflow-hidden rounded-lg mx-auto"
+>
+  <img
+    src={image}
+    alt={alt}
+    width={640}
+    height={480}
+    class="absolute h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
+  />
+  <div
+    class="absolute z-10 flex h-full w-full flex-col items-start justify-end space-y-2 bg-gradient-to-t from-gray-900 to-transparent p-5 text-gray-300 transition-all duration-300 group-hover:text-white"
+  >
+    <p class="text-xs font-medium">
+      {newDate.toDateString()} &#x2022; {author}
+    </p>
+    <h1 class="text-xl font-bold">{title}</h1>
+    <p class="text-sm font-medium">
+      {description.slice(0, 100)}...
+    </p>
+  </div>
+</a>

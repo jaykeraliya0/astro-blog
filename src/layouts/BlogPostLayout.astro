@@ -1,0 +1,48 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+const { frontmatter } = Astro.props;
+const pageTitle = `Jay's Blog | ${frontmatter.title}`;
+const date = new Date(frontmatter.date);
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="scroll-smooth">
+    <div class="max-w-4xl mx-auto scroll-smooth pt-10">
+      <Header title="Jay's Blog" />
+      <!-- header -->
+      <header
+        class="relative h-72 mb-10 space-y-2 text-center flex justify-center items-center"
+      >
+        <div class="absolute w-full h-56 -z-10">
+          <img
+            src={frontmatter.image.url}
+            alt={frontmatter.title}
+            class="object-cover w-full h-full rounded-xl shadow-sm"
+          />
+        </div>
+        <div
+          class="absolute bottom-0 h-1/2 bg-gray-50/80 backdrop-blur-sm w-1/2 mx-auto rounded-xl shadow-lg flex justify-center items-center flex-col"
+        >
+          <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
+          <p class="text-gray-500 text-sm">{date.toDateString()}</p>
+        </div>
+      </header>
+      <!-- content -->
+      <div
+        class="prose prose-img:rounded-xl prose-img:mx-auto bg-gray-100 w-full px-10 max-w-4xl scroll-smooth shadow-md p-10 rounded-xl mb-10"
+      >
+        <slot />
+      </div>
+      <!-- footer -->
+      <Footer />
+    </div>
+  </body>
+</html>
