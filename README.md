@@ -5,7 +5,7 @@ This is a personal blog project built with [Astro](https://astro.build/), the al
 ## Features
 
 - Markdown and MDX support for writing blog posts
-- Visit the '/src/pages/posts' directory to add or edit blog posts.
+- Visit the `/src/pages/posts` directory to add or edit blog posts.
 - Content fetching from local files or external sources
 - Custom layouts and styles using Tailwind CSS
 - Deployment to Vercel with one-click
