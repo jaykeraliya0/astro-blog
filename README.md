@@ -1,55 +1,40 @@
-# Astro Starter Kit: Basics
+# Astro Blog Example
 
-```
-npm create astro@latest -- --template basics
-```
+This is a personal blog project built with [Astro](https://astro.build/), the all-in-one web framework designed for speed. It showcases how to use Astro's built-in Markdown support and content APIs to create a fast and SEO-friendly blog.
+## Features
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+- Markdown and MDX support for writing blog posts
+- Content fetching from local files or external sources
+- Custom layouts and styles using Tailwind CSS
+- Deployment to Netlify with one-click
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Demo
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+You can check out the live demo here: https://blog.jaykeraliya.tech/
 
+## Installation
 
-## 🚀 Project Structure
+To run this project locally, you need to have [Node.js](https://nodejs.org/) installed on your machine.
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Clone this repository: `git clone https://github.com/jaykeraliya0/astro-blog.git`
+2. Navigate to the project folder: `cd astro-blog`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open http://localhost:3000 in your browser
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Deployment
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To deploy this project to Vercel, you can use the button below:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/jaykeraliya0/astro-blog)
 
-Any static assets, like images, can be placed in the `public/` directory.
+Alternatively, you can follow these steps:
 
-## 🧞 Commands
+1. Create a new project on Vercel and link it to your GitHub repository
+2. Set the build command to `npm run build` and the output directory to `dist`
+3. Click on "Deploy" and wait for the build to finish
+4. Enjoy your fast and SEO-friendly blog powered by Astro!
 
-All commands are run from the root of the project, from a terminal:
+## License
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
