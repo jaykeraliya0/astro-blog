@@ -6,7 +6,7 @@ This is a personal blog project built with [Astro](https://astro.build/), the al
 - Markdown and MDX support for writing blog posts
 - Content fetching from local files or external sources
 - Custom layouts and styles using Tailwind CSS
-- Deployment to Netlify with one-click
+- Deployment to Vercel with one-click
 
 ## Demo
 
